@@ -29,7 +29,7 @@ const Hireme = () => {
           <div
             data-aos="fade-left"
             className="border-2 border-dark_primary max-w-sm
-           p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
+           p-6 shadow-sm rounded-xl rounded-br-[9rem] sm:min-w-[12rem] ml-13"
           >
             <p className="leading-7">{Hireme.para}</p>
             <br />

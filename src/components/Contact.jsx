@@ -1,29 +1,32 @@
-import { createElement, useRef } from "react";
-import { content } from "../Content";
-import emailjs from "@emailjs/browser";
-import toast, { Toaster } from "react-hot-toast";
+import { createElement, useRef } from 'react';
+import { content } from '../Content';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
   const { Contact } = content;
   const form = useRef();
 
   // Sending Email
-  const sendEmail = (e) => {
+  const sendEmail = e => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-      'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
+        'service_0dikxln',
+        'template_ui78g9w',
+        form.current,
+        'r65siRarkKOk1Edhe'
       )
       .then(
-        (result) => {
+        result => {
           console.log(result.text);
           // Clear all input field values
           form.current.reset();
           // Success toast message
-          toast.success("Email send Successfully");
+          toast.success('Email send Successfully');
         },
-        (error) => {
+        error => {
           console.log(error.text);
           toast.error(error.text);
         }
